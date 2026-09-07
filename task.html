@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dom</title>
+</head>
+<body>
+    <input type="number" id="number" placeholder="number">
+    <input type="number" id="num" placeholder="number">
+    <p id="para"></p>
+    <button onclick="addOn()">+</button>
+    <button onclick="subOn()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+
+
+    <input type="text" id="check">
+    <button onclick="checkOn()">Check</button>
+    <p id="data"></p>
+    
+    <script>
+        function addOn(){
+            let number =document.getElementById('number').value;
+            let num =document.getElementById('num').value;
+            let sum = parseInt(number) + parseInt(num);
+            document.getElementById('para').innerHTML=sum;
+        }
+        function subOn(){
+            let number =document.getElementById('number').value;
+            let num =document.getElementById('num').value;
+            let sum = number - num;
+            document.getElementById('para').innerHTML=sum;
+        }
+         function multiply(){
+            let number =document.getElementById('number').value;
+            let num =document.getElementById('num').value;
+            let sum = number * num;
+            document.getElementById('para').innerHTML=sum;
+        }
+        function divide(){
+            let number =document.getElementById('number').value;
+            let num =document.getElementById('num').value;
+            let sum = number / num;
+            document.getElementById('para').innerHTML=sum;
+        }
+
+
+        
+        function checkOn(){
+            let check = document.getElementById('check').value;
+            let isNumber = !isNaN(check) && check!=='';
+            if(isNumber){
+                document.getElementById('data').innerHTML='Number'
+            }else{
+                document.getElementById('data').innerHTML='String'
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

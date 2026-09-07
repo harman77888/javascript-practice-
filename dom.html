@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- html -->
+    
+    
+    <!-- <h1 id="head" style="display: none;">Hello World</h1>
+    <button onclick="changeText()">change</button> -->
+
+    <p id="add" style="display: none;"></p>
+    <button onclick="addText()">Add Text</button>
+
+    <!-- <form action="" id="student">
+       
+        <label for="f_name" id="name">First Name : </label>
+        <input type="text" placeholder="First Name" >
+        <label for="l_name">Last Name : </label>
+        <input type="text" placeholder="Last Name">
+        <label for="email">Email : </label>
+        <input type="email" placeholder="Email">
+        <label for="password">Password : </label>
+        <input type="password" placeholder="password">
+        <label for="mobile">Mobile Number : </label>
+        <input type="text" placeholder="Mobile number">
+        <button onclick="dataSubmit()">Submit</button>
+    </form> -->
+ 
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, reprehenderit.</p>
+    <button onclick="change()">Click</button>
+
+    <!-- script -->
+
+    <script>
+
+
+        function change(){
+            let par = document.getElementById("para")
+            par.innerHTML='Lorem ipsum dolor sit amet consectetur'
+            par.style="color:white; background-color:black; padding:20px; display:block;"
+        }
+
+
+
+        // function changeText(){
+        //     let a = document.getElementById('head');
+        //     a.innerHTML="Hello javascript";
+        //     a.style="color:white; width:350px; padding:10px; font-size:35px; background-color: black; text-align:center; font-weight:500;  display:block;";
+        //     // document.getElementById('head').innerHTML="Hello javascript"
+        //     // document.getElementById('head').style.color='white'
+        //     // document.getElementById('head').style.backgroundColor='black'
+        //     // document.getElementById('head').style.width='350px'
+        //     // document.getElementById('head').style.padding="10px"
+        // }
+
+        function addText(){           
+                document.getElementById('add').innerHTML='It is typically a corrupted version.'  
+        }
+
+
+
+       
+
+
+
+    </script>
+</body>
+</html>

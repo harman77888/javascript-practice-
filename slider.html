@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+    <img src="./images/images (1).jpeg" alt="error" style="width: 500px; height: 500px;" id="slide">
+    <button id="back" onclick="preview()">Previous</button>
+    <button id="new" onclick="next()">Next</button>
+
+    <!-- script  -->
+
+    <script>
+        let a = document.getElementById('slide');
+        let b = document.getElementById("back");
+        let c = document.getElementById("new");
+        function preview(){
+            a.src='./images/images (2).jpeg'
+            a.src='./images/images (3).jpeg'
+            a.src='./images/images (4).jpeg'
+            a.src='./images/images (5).jpeg'
+            a.src='./images/images (6).jpeg'
+            a.src='./images/images.jpeg'
+        }
+
+    </script>
+</body>
+</html>

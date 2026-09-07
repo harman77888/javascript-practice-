@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function practice</title>
+</head>
+<body>
+    <script>
+        // function practice
+
+        function celsiusToFahrenheit(celsius) {
+
+            return (celsius * 9/5) + 32;
+        }
+        console.log(celsiusToFahrenheit(99))    
+
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5/9;
+        }
+       console.log( fahrenheitToCelsius(0))
+
+function monthName(monthNum){
+    let monthNames=[
+        "jan","feb","march","april","may",
+        "june","july","aug","sep","nov","dec" 
+       ];
+       return monthNames[monthNum - 1]|| "Invaild month";
+    }
+    console.log(monthName(7))
+
+
+    
+
+    </script>
+</body>
+</html>

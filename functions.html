@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // return values functions
+
+        function name(fName,lName){
+            fullName = fName + lName;
+            return fullName;
+        }
+        console.log(name('Harmanpreet ','Singh'))
+
+
+        function num(a,b){
+            total=a+b;
+            return total;
+        }
+        console.log(num(11,55));
+        
+        function sub(a,b){
+            total=a-b;
+            return total;
+        }
+        console.log(sub(22,11));
+
+        function multi(a,b){
+            total = a*b;
+            return total;
+
+        }
+        console.log(multi(22,22));
+
+        let divide = (a,b) =>{
+            total = a/b;
+            return total;
+        }
+        console.log(divide(33,11));
+
+        let square = (n)=>{
+            total = n*n;
+            return total;
+
+        }
+        console.log(square(5));
+
+        let cube=(m)=>{
+            total = m*m*m;
+            return total;
+        }
+        console.log(cube(4));
+
+        function sd(a){
+            number=(a%2===0)?'even':'odd'
+            return number;
+        }
+        console.log(sd(20));
+
+        function find(){
+               a=52;
+               b=44;
+               if(a>=b){
+                return a;
+               } else{
+                console.log('Smaller')
+               }     
+        }
+        console.log(find());
+
+        function rectangle(l,b){
+            area=l*b;
+            return area;
+        }
+        console.log(rectangle(11,33));
+
+        
+    </script>
+</body>
+</html>

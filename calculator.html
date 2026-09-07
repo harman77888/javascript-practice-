@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .btn {
+        width: 200px;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 10px;
+        margin-left: 7px;
+      }
+      .dis {
+        padding: 20px;
+        width: 192px;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        height: 50px;
+      }
+      .cal {
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+      }
+      .calculator {
+        border: 1px solid black;
+        width: 210px;
+        text-align: center;
+      }
+      .dis {
+        margin-top: 10px;
+      }
+
+      .btn1 {
+        grid-column: span 2;
+        width: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <input type="text" id="display" placeholder="00" class="dis" />
+        <div class="btn">
+          <input type="text" value="AC" class="cal" onclick="aDel()" id="clear" name="AC"/>
+          <input type="text" value="DE" class="cal" onclick="del()" name="DE"/>
+          <input type="text" value="." class="cal" onclick=""/>
+          <input type="text" value="/" class="cal" onclick=""/>
+          <input type="text" value="7" class="cal" onclick=""/>
+          <input type="text" value="8" class="cal" onclick=""/>
+          <input type="text" value="9" class="cal" onclick=""/>
+          <input type="text" value="*" class="cal" onclick=""/>
+          <input type="text" value="4" class="cal" onclick=""/>
+          <input type="text" value="5" class="cal" onclick=""/>
+          <input type="text" value="6" class="cal" onclick=""/>
+          <input type="text" value="-" class="cal" onclick=""/>
+          <input type="text" value="1" class="cal" onclick=""/>
+          <input type="text" value="2" class="cal" onclick=""/>
+          <input type="text" value="3" class="cal" onclick=""/>
+          <input type="text" value="+" class="cal" onclick=""/>
+          <input type="text" value="00" class="cal" onclick=""/>
+          <input type="text" value="0" class="cal" onclick=""/>
+          <input type="text" value="=" class="cal btn1" onclick=""/>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        display=document.getElementById('display').value;
+        function aDel(){
+            clear=document.getElementById('clear')
+            
+
+        }
+    </script>
+  </body>
+</html>
