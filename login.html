@@ -1,26 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div class="login" id="logIn">
-            <label for="first name">First Name</label>
-            <input type="text" placeholder="First Name">
-            <label for="l_name">Last Name</label>
-            <input type="text" placeholder="Last Name">
-            <label for="email">Email</label>
-            <input type="text" placeholder="Email">
-            <label for="password">Password</label>
-            <input type="text" placeholder="Password">
-            <label for="cPass">Confirm Password</label>
-            <input type="text" placeholder="Confirm Password">
-            <button onsubmit="submitData()">Submit</button>
-            <button onclick="cancelData()">Cancel</button>   
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container" style="display: none" id="logIn">
+      <form class="login">
+        <label for="first name">First Name</label>
+        <input type="text" placeholder="First Name" id="f_name" />
+        <label for="l_name">Last Name</label>
+        <input type="text" placeholder="Last Name" id="l_name" />
+        <label for="email">Email</label>
+        <input type="text" placeholder="Email" id="mail" />
+        <label for="password">Password</label>
+        <input type="text" placeholder="Password" id="pass" />
+        <label for="cPass">Confirm Password</label>
+        <input type="text" placeholder="Confirm Password" id="cPass" />
+        <button type="submit" onclick="submitData()" class="button">Submit</button>
+        <button onclick="cancelData()" >Cancel</button>
+      </form>
     </div>
-    <button onclick="loginPage()">Login Page</button>
-</body>
+    <button onclick="loginPage()" class="btn">Login Page</button>
+    <script>
+      function loginPage() {
+        document.getElementById("logIn").style.display = "block";
+      }
+      function cancelData() {
+        document.getElementById("logIn").style.display = "none";
+      }
+      function submitData() {
+        f_name = document.getElementById("f_name").value;
+        l_name = document.getElementById("l_name").value;
+        mail = document.getElementById("mail").value;
+        pass = document.getElementById("pass").value;
+        cPass = document.getElementById("cPass").value;
+        if (
+          !f_name ||
+          !l_name ||
+          !mail ||
+          !pass||
+          !cPass 
+        ) {
+          alert("Please fill all the fields");
+        }
+        else if (pass!= cPass) {
+          alert("Password and Confirm Password do not match");
+        } 
+        else {
+          alert("Data submitted successfully");
+          document.getElementById("logIn").style.display = "none";  
+        }
+      }
+    </script>
+  </body>
 </html>
