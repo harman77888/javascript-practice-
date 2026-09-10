@@ -6,7 +6,6 @@
     <title>Task Dom</title>
   </head>
   <body>
-
     <input type="number" id="number" placeholder="number" />
     <input type="number" id="num" placeholder="number" />
     <p id="para"></p>
@@ -15,20 +14,23 @@
     <button onclick="multiply()">*</button>
     <button onclick="divide()">/</button>
 
-    <input type="text" id="check" />
-    <button onclick="checkOn()">Check</button>
-    <p id="data"></p>
-
     <input type="text" placeholder="Name" id="name" />
     <input type="text" placeholder="password" id="password" />
     <input type="text" placeholder="Confirm Password" id="cPassword" />
     <button onclick="submitData()">Submit</button>
     <p id="submit"></p>
 
-   
+    <form action="https://www.youtube.com/results?search_query=" >
+      <input type="text" id="searchBar" placeholder="Search Youtube Video" value=""/>
+      <button>Search</button>
+    </form>
 
-    
+    <input type="text" id="check" />
+    <button onclick="checkOn()">Check</button>
+    <p id="data"></p>
+
     <script>
+      
       function addOn() {
         let number = document.getElementById("number").value;
         let num = document.getElementById("num").value;
@@ -53,6 +55,7 @@
         let sum = number / num;
         document.getElementById("para").innerHTML = sum;
       }
+      
       function checkOn() {
         let check = document.getElementById("check").value;
         let isNumber = !isNaN(check) && check !== "";
@@ -76,12 +79,29 @@
           document.getElementById("submit").innerHTML = "password not matched ";
           return false;
         }
-        if(pass==cPass){
-            document.getElementById('submit').innerHTML=name
-            return false;
+        if (pass == cPass) {
+          document.getElementById("submit").innerHTML = name;
+          return false;
         }
         return true;
       }
+      
+      
+      // function searchBtn() {
+      //   let search = document.getElementById("searchBar").value;
+      // }
+
+
+      // function checkOn() {
+      //   let check = document.getElementById("check").value;
+      //   if (!isNaN(check) && check!=="") {
+      //     document.getElementById("data").innerHTML = "Number";
+      //   }else {
+      //     document.getElementById("data").innerHTML = "String";
+      //   }
+      // }
+
+
     </script>
   </body>
 </html>
