@@ -55,40 +55,134 @@
     </style>
   </head>
   <body>
+    <!-- make a calculator without using script fully functional -->
     <div class="container">
-      <div class="calculator">
-        <input type="text" id="display" placeholder="00" class="dis" />
-        <div class="btn">
-          <input type="text" value="AC" class="cal" onclick="aDel()" id="clear" name="AC"/>
-          <input type="text" value="DE" class="cal" onclick="del()" name="DE"/>
-          <input type="text" value="." class="cal" onclick=""/>
-          <input type="text" value="/" class="cal" onclick=""/>
-          <input type="text" value="7" class="cal" onclick=""/>
-          <input type="text" value="8" class="cal" onclick=""/>
-          <input type="text" value="9" class="cal" onclick=""/>
-          <input type="text" value="*" class="cal" onclick=""/>
-          <input type="text" value="4" class="cal" onclick=""/>
-          <input type="text" value="5" class="cal" onclick=""/>
-          <input type="text" value="6" class="cal" onclick=""/>
-          <input type="text" value="-" class="cal" onclick=""/>
-          <input type="text" value="1" class="cal" onclick=""/>
-          <input type="text" value="2" class="cal" onclick=""/>
-          <input type="text" value="3" class="cal" onclick=""/>
-          <input type="text" value="+" class="cal" onclick=""/>
-          <input type="text" value="00" class="cal" onclick=""/>
-          <input type="text" value="0" class="cal" onclick=""/>
-          <input type="text" value="=" class="cal btn1" onclick=""/>
+      <form action="">
+
+
+        <div class="calculator">
+          <input type="text" name="display" class="dis"  placeholder="00"/>
+          <div class="btn">
+            <input
+              type="button"
+              value="AC"
+              class="cal"
+              onclick="display.value=' '"
+              id="clear"
+            />
+            <input
+              type="button"
+              value="DE"
+              class="cal"
+              onclick="display.value=display.value.slice(0, -1)"
+              name="DE"
+            />
+            <input
+              type="button"
+              value="."
+              class="cal"
+              onclick="display.value+='.'"
+            />
+            <input
+              type="button"
+              value="/"
+              class="cal"
+              onclick="display.value+='/'"
+            />
+            <input
+              type="button"
+              value="7"
+              class="cal"
+              onclick="display.value+='7'"
+            />
+            <input
+              type="button"
+              value="8"
+              class="cal"
+              onclick="display.value+='8'"
+            />
+            <input
+              type="button"
+              value="9"
+              class="cal"
+              onclick="display.value+='9'"
+            />
+            <input
+              type="button"
+              value="*"
+              class="cal"
+              onclick="display.value+='*'"
+            />
+            <input
+              type="button"
+              value="4"
+              class="cal"
+              onclick="display.value+='4'"
+            />
+            <input
+              type="button"
+              value="5"
+              class="cal"
+              onclick="display.value+='5'"
+            />
+            <input
+              type="button"
+              value="6"
+              class="cal"
+              onclick="display.value+='6'"
+            />
+            <input
+              type="button"
+              value="-"
+              class="cal"
+              onclick="display.value+='-'"
+            />
+            <input
+              type="button"
+              value="1"
+              class="cal"
+              onclick="display.value+='1'"
+            />
+            <input
+              type="button"
+              value="2"
+              class="cal"
+              onclick="display.value+='2'"
+            />
+            <input
+              type="button"
+              value="3"
+              class="cal"
+              onclick="display.value+='3'"
+            />
+            <input
+              type="button"
+              value="+"
+              class="cal"
+              onclick="display.value+='+'"
+            />
+            <input
+              type="button"
+              value="00"
+              class="cal"
+              onclick="display.value+='00'"
+            />
+            <input
+              type="button"
+              value="0"
+              class="cal"
+              onclick="display.value+='0'"
+            />
+  
+            <input
+              type="button"
+              value="="
+              class="cal btn1"
+              onclick="display.value=eval(display.value)"
+            />
+          </div>
         </div>
-      </div>
+      </form>
     </div>
-
-    <script>
-        display=document.getElementById('display').value;
-        function aDel(){
-            clear=document.getElementById('clear')
-            
-
-        }
-    </script>
   </body>
 </html>

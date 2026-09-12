@@ -1,48 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // conditions
+      // conditions
 
-// user login 
+      // user login
 
-        user={
-            userName:"Rohan",
-            email:"rohan@gmail.com",
-            password:"rohan@123",
-            role:"user"
-        }
+      user = {
+        userName: "Rohan",
+        email: "rohan@gmail.com",
+        password: "rohan@123",
+        role: "user",
+      };
 
-        isUserName=user.userName==="Rohan"?true:false
-        isValidEmail=user.email==="rohan@gmail.com"?true:false
-        isValidPassword=user.password==="rohan@123"?true:false
-        isValidRole=user.role==="user"?true:false
+      isUserName = user.userName === "Rohan" ? true : false;
+      isValidEmail = user.email === "rohan@gmail.com" ? true : false;
+      isValidPassword = user.password === "rohan@123" ? true : false;
+      isValidRole = user.role === "user" ? true : false;
 
-        result=isUserName && isValidEmail && isValidPassword && isValidRole?"Welcome User":"Please Login"
+      result =
+        isUserName && isValidEmail && isValidPassword && isValidRole
+          ? "Welcome User"
+          : "Please Login";
 
-        console.log(result)
-        
-        
+      console.log(result);
 
+      // using operation make 108 with single number?
 
-
-        a=10;
-        num=a*a+a
-        $result=--num
-        add=--$result
-        console.log(add)
-        
-    
-        
-
-
-
-
+      a = 10;
+      num = a * a + a;
+      $result = --num;
+      add = --$result;
+      console.log(add);
     </script>
-</body>
+  </body>
 </html>

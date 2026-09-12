@@ -1,60 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-</head>
-<body>
-    <h1 id="head" style="display: none;">Harman</h1>
+  </head>
+  <body>
+    <!-- create a hide and seen button usig dom -->
+    <h1 id="head" style="display: none">Harman</h1>
     <button onclick="changeOn()" id="hide">Show</button>
-     <button id="btn">Click</button>
+    <button id="btn">Click</button>
 
-     <img src="./images/realistic-lit-light-bulb-isolated_1284-41774.avif" alt="error" style="width: 300px; height:300px; display: none;" id="bulb" >
+    <!-- create a button to on off images  -->
+
+    <img
+      src="./images/realistic-lit-light-bulb-isolated_1284-41774.avif"
+      alt="error"
+      style="width: 300px; height: 300px; display: none"
+      id="bulb"
+    />
     <button onclick="turnOn" id="on">On</button>
     <button onclick="turnOff" id="off">Off</button>
 
-     <script>
-         
-         let a = document.getElementById("head");
-         let b = document.getElementById("btn")
-         function changeOn(){
-             a.innerHTML='Hello Harman';
-             a.style="width:400px; background-color:black; color:white; padding:20px; display:block;"
-             // document.getElementById("hide").innerHTML='Show'
-         }
-         
-        b.addEventListener("click",function(){
-            let isvisible = a.style.display=== "block";
-            if(isvisible){
-                a.style.display = "none";
-                b.innerHTML = "Show";
-            }else{
-                 a.style.display = "block";
-                 b.innerHTML = "Hide";
-            }
-        })
-        
-        let bulb = document.getElementById('bulb')
-        let on = document.getElementById('on')  
-        let off = document.getElementById('off')
+    <script>
+      let a = document.getElementById("head");
+      let b = document.getElementById("btn");
+      function changeOn() {
+        a.innerHTML = "Hello Harman";
+        a.style =
+          "width:400px; background-color:black; color:white; padding:20px; display:block;";
+        // document.getElementById("hide").innerHTML='Show'
+      }
 
-        on.addEventListener("click",function(){
-            let isOn = bulb
-            if(isOn){
-                bulb.style.display="block"   
-            }
-        })
-        off.addEventListener("click",function(){
-            let isOff=bulb.src="./bulb.png"
-            if(isOff){
-                bulb.src="./images/bulb.jpg";
-            }
-        })
+      b.addEventListener("click", function () {
+        let isvisible = a.style.display === "block";
+        if (isvisible) {
+          a.style.display = "none";
+          b.innerHTML = "Show";
+        } else {
+          a.style.display = "block";
+          b.innerHTML = "Hide";
+        }
+      });
 
+      let bulb = document.getElementById("bulb");
+      let on = document.getElementById("on");
+      let off = document.getElementById("off");
 
-
-
+      on.addEventListener("click", function () {
+        let isOn = bulb;
+        if (isOn) {
+          bulb.style.display = "block";
+        }
+      });
+      off.addEventListener("click", function () {
+        let isOff = (bulb.src = "./bulb.png");
+        if (isOff) {
+          bulb.src = "./images/bulb.jpg";
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

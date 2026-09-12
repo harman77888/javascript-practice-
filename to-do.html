@@ -6,6 +6,46 @@
     <title>To-Do List</title>
 </head>
 <body>
-    
+    <input type="text"  placeholder="Plese Enter The text" id="items">
+    <button onclick="addText()">Add Text</button>
+
+    <ol id="list">
+
+    </ol>
+
+
+    <script>
+        function addText(){
+            let inputValue=document.getElementById("items").value;
+            if(!inputValue){
+                alert("Please Fill The Input Field")
+            }
+
+
+            let li =document.createElement("li")
+            let textNode=document.createTextNode(inputValue)
+            li.appendChild(textNode)
+
+            let editBtn=document.createElement("button")
+            editBtn.appendChild(document.createTextNode("edit"))
+            li.appendChild(editBtn)
+
+            editBtn.onclick=function(){
+                let newTask=prompt("Please Enter New Text")
+            }
+
+
+            let delBtn=document.createElement("button")
+            delBtn.appendChild(document.createTextNode("delete"))
+            li.appendChild(delBtn)
+            delBtn.onclick=function(){
+                
+            }
+
+            document.getElementById("list").appendChild(li)
+
+            document.getElementById("items").value=''
+        }
+    </script>
 </body>
 </html>
