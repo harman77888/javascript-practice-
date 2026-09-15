@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tag Selector</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Q13. Use getElementsByTagName() to select all <p> elements and change their text color to red.  -->
-        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, excepturi.</p>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, excepturi.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, excepturi.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, excepturi.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, excepturi.</p>
@@ -15,55 +15,51 @@
 
  -->
 
-        <!-- Q14. Use getElementsByTagName() to select all <h2> elements and change their font size to 30px.  -->
+    <!-- Q14. Use getElementsByTagName() to select all <h2> elements and change their font size to 30px.  -->
 
-
-            <!-- <h2>harman</h2>
+    <!-- <h2>harman</h2>
             <h2>harman</h2>
             <h2>harman</h2>
             <h2>harman</h2>
             <h2>harman</h2> -->
 
-            <!-- Q15. Use getElementsByTagName() to select all <li> elements and change their background color to yellow.  -->
+    <!-- Q15. Use getElementsByTagName() to select all <li> elements and change their background color to yellow.  -->
 
-                <!-- <li>hello</li>
+    <!-- <li>hello</li>
                 <li>hello</li>
                 <li>hello</li>
                 <li>hello</li> -->
 
+    <!-- Q16. Use getElementsByTagName() to select all <div> elements and add a 2px solid black border to each one. -->
 
-                <!-- Q16. Use getElementsByTagName() to select all <div> elements and add a 2px solid black border to each one. -->
-
-                    <!-- <div class="box"></div>
+    <!-- <div class="box"></div>
                     <div class="box"></div>
                     <div class="box"></div>
                     <div class="box"></div>
                     <div class="box"></div> -->
     <script>
-        // para=document.getElementsByTagName('p')
-    
-        // for(i=0;i<para.length;i++){
-        //     para[i].style.color='red'
-        // }
+      // para=document.getElementsByTagName('p')
 
-        // head=document.getElementsByTagName('h2')
-        // for(i=0;i<head.length;i++){
-        //     head[i].style.fontSize='30px'
-        // }
+      // for(i=0;i<para.length;i++){
+      //     para[i].style.color='red'
+      // }
 
-        // li=document.getElementsByTagName('li');
-        // for(i=0;i<li.length;i++){
-        //     li[i].style.backgroundColor='yellow'
-        // }
+      head = document.getElementsByTagName("h2");
+      for (i = 0; i < head.length; i++) {
+        head[i].style.fontSize = "30px";
+      }
 
-        // box=document.getElementsByTagName('div')
-        // for(i=0;i<box.length;i++){
-        //     box[i].style.border='2px solid black'
-        //     box[i].style.width='400px'
-        //     box[i].style.height='40px'
-        // }
-        
-    
+      // li=document.getElementsByTagName('li');
+      // for(i=0;i<li.length;i++){
+      //     li[i].style.backgroundColor='yellow'
+      // }
+
+      // box=document.getElementsByTagName('div')
+      // for(i=0;i<box.length;i++){
+      //     box[i].style.border='2px solid black'
+      //     box[i].style.width='400px'
+      //     box[i].style.height='40px'
+      // }
     </script>
-</body>
+  </body>
 </html>
