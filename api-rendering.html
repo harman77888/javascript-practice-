@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Fetching</title>
+  </head>
+  <body>
+    <h1>Api Fetching</h1>
+
+    <p id="loading" style="color: red"></p>
+    <p id="loading"></p>
+    <p id="loading"></p>
+    <p id="loading"></p>
+    <script>
+      const res = fetch("https://fakestoreapi.com/products")
+        .then((response) => response.json())
+        .then((data) => {
+          // console.log(data);
+          data.map((item) => {
+            document.getElementById("loading").innerHTML +=
+              `<p>${item.title}</p>`;
+            document.getElementById("loading").innerHTML +=
+              `<p>${item.price}</p>`;
+            document.getElementById("loading").innerHTML +=
+              `<p>${item.description}</p>`;
+            document.getElementById("loading").innerHTML +=
+              `<p>${item.category}</p>`;
+          });
+        })
+        .catch((error) => {
+          console.log("Request failed:", error);
+        });
+    </script>
+  </body>
+</html>
